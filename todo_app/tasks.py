@@ -43,6 +43,6 @@ def list_tasks():
 def complete_task(index):
     """Mark a task as completed."""
     tasks = load_tasks()
-    if 0 <= index < len(tasks):
-        tasks[index]["completed"] = True
+    if 1 <= index < len(tasks)+1:
+        tasks[index-1]["completed"] = True
         save_tasks(tasks)
